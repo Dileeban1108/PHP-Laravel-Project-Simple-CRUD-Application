@@ -44,14 +44,29 @@ This project is a simple CRUD (Create, Read, Update, Delete) application built u
      ```bash
      php artisan key:generate
      ```
-
+     
+5. **Clear Configuration Cache:**
+   - After setting the application key, clear the configuration cache to ensure Laravel picks up the new key:
+     ```bash
+     php artisan config:cache
+     ```
+     
 6. **Run Migrations:**
    - Run the migrations to create the necessary database tables:
      ```bash
      php artisan migrate
      ```
 
-7. **Serve the Application:**
+6. **Clear Application Caches:**
+   - Clear various Laravel caches to ensure there are no stale or corrupted cached files:
+     ```bash
+     php artisan cache:clear
+     php artisan config:clear
+     php artisan route:clear
+     php artisan view:clear
+     ```
+     
+8. **Serve the Application:**
    - Start the Laravel development server by running:
      ```bash
      php artisan serve
